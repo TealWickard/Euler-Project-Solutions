@@ -1,0 +1,18 @@
+https://projecteuler.net/problem=8
+
+For each number, I took the produce of the next 13 numbers (assuming the starting number wasn't in the last 13).
+I then returned the largest of them.
+Runtime: O(N^2)
+Answer: 23514624000
+
+Notes:
+I'm pretty sure there's a way to do this in O(N).
+I believe it would be by storing the product of the first 13 numbers, excluding zeroes.
+I would also keep a count of zeroes.
+Whenever i increments, I would divide the running total by the oldest digit and multiply it by the newest digit.
+If the new/old digit are zero, I would change the count of zeroes to match this.
+I would only return products when the count of zeroes is 0.
+
+I have now implemented this in Solution2.java
+Runtime: O(N)
+Answer: 23514624000
