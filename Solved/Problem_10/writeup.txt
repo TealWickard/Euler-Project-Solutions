@@ -1,0 +1,7 @@
+https://projecteuler.net/problem=10
+
+Stole the isPrime() function I wrote from problem 7.
+I iterated through every odd number under 2 million, which took about 5 seconds, so processing time is beginning to be a limitation.
+
+Runtime: O(N^(3/2))
+Answer: 142913828922
