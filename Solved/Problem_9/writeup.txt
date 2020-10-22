@@ -1,0 +1,11 @@
+https://projecteuler.net/problem=9
+
+WLOG, let a >= b
+This means that c > a >= b, because if a or b > c, a^2 + b^2 =/= c^2.
+This allows me to remove numerous cases, but I still iterate over a and b.
+
+Runtime: O(N^2)
+Answer: 31875000
+
+Notes:
+I have a feeling this can be done in O(N) with clever math. I may have to return to this at some point.
