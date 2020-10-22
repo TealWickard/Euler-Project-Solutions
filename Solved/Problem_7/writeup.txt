@@ -1,3 +1,5 @@
+https://projecteuler.net/problem=7
+
 I wrote a basic isPrime() function, that checked if any number under sqrt(num) divides num.
 I then counted up until isPrime() returned true 10001 times.
 I started on 3 skipped even numbers to double my speed.

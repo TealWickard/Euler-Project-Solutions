@@ -1,3 +1,5 @@
+https://projecteuler.net/problem=6
+
 Pretty straightforward, just iterate through the first 100 numbers and do what the problem asks.
 Runtime: O(N)
 Answer: 25164150

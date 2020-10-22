@@ -1,3 +1,5 @@
+https://projecteuler.net/problem=5
+
 I did not use code for this problem. In order to be evenly divisible by a set of numbers, it must be a multiple of those numbers.
 Because of this, I just need to find the LCM of {1, 2, ... , 20}, which is easy with factor analysis
 
