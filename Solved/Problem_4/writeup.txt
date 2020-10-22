@@ -1,0 +1,4 @@
+There might be a better approach, but I started by iterating through every pair of 3 digit numbers, multiplying them, and saving the result if the answer was the current largest.
+I then cut down on the cases by stopping if the larger of the two numbers was smaller than sqrt(current highest answer).
+Runtime: O(N^2), where N is 10^D, where D is digits being multiplied together.
+Answer: 906609

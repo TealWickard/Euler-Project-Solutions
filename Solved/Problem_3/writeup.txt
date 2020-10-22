@@ -1,0 +1,9 @@
+https://projecteuler.net/problem=3
+
+For this problem, I decided to use BigIntegers, as the numbers started out too large for integers, and I wanted to keep them as integers.
+While I only needed to check prime divisors, checking if the divisors were prime would likely take longer than just checking every number.
+Whenever I found a factor, I divided it out of the initial number.
+I only have to go up to sqrt(starting number), because anything larger than that cannot be a factor.
+
+Runtime: O(sqrt(N))
+Answer: 6857

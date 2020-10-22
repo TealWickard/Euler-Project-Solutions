@@ -1,0 +1,28 @@
+I did not use code for this problem. In order to be evenly divisible by a set of numbers, it must be a multiple of those numbers.
+Because of this, I just need to find the LCM of {1, 2, ... , 20}, which is easy with factor analysis
+
+1: 1
+2: 2
+3: 3
+4: 2^2
+5: 5
+6: 2 * 3
+7: 7
+8: 2^3
+9: 3^2
+10: 2 * 5
+11: 11
+12: 2^2 * 3
+13: 13
+14: 2 * 7
+15: 3 * 5
+16: 2^4
+17: 17
+18: 2 * 3^2
+19: 19
+20: 2^2 * 5
+Taking the highest power for each prime number gives:
+Answer = 2^4 * 3^2 * 5 * 7 * 11 * 13 * 17 * 19 = 232792560
+
+Runtime: O(N * log(N)), if I were to do this with a computer. For each value, the GCD must be found, which is a log(N) operation
+Answer: 232792560

@@ -1,0 +1,8 @@
+https://projecteuler.net/problem=2
+
+For this problem, I calculated the fibonaci sequence, storing two sequential values at a time.
+When the smaller value is even, I added it to the answer.
+When the smaller number exceeded 4000000, I returned the answer.
+
+Runtime: O(N^-phi), where N is the number to stop at. O(N), where N is the number of items in the sequence
+Answer: 4613732
