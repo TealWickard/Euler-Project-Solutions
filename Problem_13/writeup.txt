@@ -1,0 +1,6 @@
+https://projecteuler.net/problem=13
+
+This problem is just about reading the data into BigIntegers, and summing them.
+
+Runtime: O(N), where N is the quantity of numbers. I am not 100% sure of this runtime, as I do not know how fast BigInteger operations are.
+Answer: 5537376230
