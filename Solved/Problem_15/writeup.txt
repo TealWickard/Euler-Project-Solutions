@@ -1,0 +1,12 @@
+https://projecteuler.net/problem=15
+
+While I initially tried to do this recursively, this is a simple combinatoric problem.
+Let the path of turns be a string of R and Ds, ie "RRRDDDRDRRRDRDRRD...".
+Let the initial path be a string of 20 rights turns, ie "RRRRRRR...".
+There are 21 different locations in that string to insert the first D.
+The second D has 22, the third D has 23, etc until 41.
+However, there is overcounting because the D can be place in any order.
+To counteract this, I had to divide by 20!, because that is the amount of permutations of 20 unique objects.
+
+Runtime: O(N)
+Answer: 137846528820
