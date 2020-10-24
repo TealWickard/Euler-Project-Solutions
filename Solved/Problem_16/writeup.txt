@@ -1,0 +1,7 @@
+https://projecteuler.net/problem=16
+
+This problem just requires knowledge of a data type that can store 300+ digits.
+I created 2^1000 in a BigInteger, then iterated through every character in its string representation and summed it's numerical value.
+
+Runtime: O(N), where N is the digits in the number
+Answer: 1366
