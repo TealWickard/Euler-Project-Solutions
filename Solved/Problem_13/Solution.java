@@ -1,4 +1,4 @@
-package Problem_13;
+package Solved.Problem_13;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Solution {
     public static void main(String[] args) throws FileNotFoundException {
         BigInteger answer = new BigInteger("0");
-        Scanner scan = new Scanner(new File("Problem_13/numbers.txt"));
+        Scanner scan = new Scanner(new File("Solved/Problem_13/numbers.txt"));
         while(scan.hasNext()){
             answer = answer.add(new BigInteger(scan.nextLine()));
         }
