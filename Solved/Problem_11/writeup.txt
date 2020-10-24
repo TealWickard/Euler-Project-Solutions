@@ -1,0 +1,12 @@
+https://projecteuler.net/problem=11
+
+I started by copy pasting the grid into a text file to read from.
+I found this a lot cleaner than trying to put the string directly into the file.
+I then read from the file into a 2D array of strings.
+Finally, I checked the diagonals, horizontal, and vertical sequences, and replaced the answer if their product was larger than the current answer.
+I made sure to only check the sequences when all 4 numbers were in the bounds of the array.
+
+Runtime: O(N), where N is the number of nubmers in the grid.
+Answer: 70600674
+
+Note: If parseInt() takes any sizeable amount of time, it may be faster to make a 2d array of ints, and parse the ints when I read them from the file, to avoid additional parseInt() calls.
