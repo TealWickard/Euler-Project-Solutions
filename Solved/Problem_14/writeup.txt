@@ -1,0 +1,9 @@
+https://projecteuler.net/problem=14
+
+For this problem, I didn't want to have to redo sequences of numbers I had already been to in order to conserve runtime.
+To counteract this, every time I finished a sequence, I stored its length in a hashmap.
+This way, whenever a element in the sequence is less than its starting value, the rest of the sequence's length will be stored in the hashmap.
+All that's left is implementing the Collatz sequence and iterating through the first million numbers.
+
+Runtime: Unsure what the runtime of any Collatz sequence is.
+Answer: 837799
