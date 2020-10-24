@@ -6,7 +6,8 @@ In order to do this, I used a hashmap to count how many instances of each diviso
 When ever the current input was divisible by the iterator, it would increment the respective value in the hashmap, divide the input, and decrement the iterator so that the loop would recognize multiple identical divisors.
 Finally, I just called this function on the triangle numbers.
 
-Runtime: O()
+Runtime: Worst case of my countDiv function is on prime numbers, so worst case O(N) for those, and best case is powers of 2, which are O(log2(N)). 
+Checking N of these gives a worst case runtime of O(N^2). I'm not sure if triangular numbers can even be prime, however...
 Answer: 76576500
 
 Notes: If memory was a limitation, it wouldn't be too difficult to change the hashmap to an ArrayList.
