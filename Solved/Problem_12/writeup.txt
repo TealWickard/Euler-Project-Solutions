@@ -1,0 +1,14 @@
+https://projecteuler.net/problem=12
+
+The majority of this problem is writing a somewhat efficient method to count divisors.
+How I did this was to take the prime factorization of the number, and then take the product of (1 + i), where i is the exponenet of primes in the prime factorization.
+In order to do this, I used a hashmap to count how many instances of each divisor there was.
+When ever the current input was divisible by the iterator, it would increment the respective value in the hashmap, divide the input, and decrement the iterator so that the loop would recognize multiple identical divisors.
+Finally, I just called this function on the triangle numbers.
+
+Runtime: O()
+Answer: 76576500
+
+Notes: If memory was a limitation, it wouldn't be too difficult to change the hashmap to an ArrayList.
+The runtime would be significantly improved if the iterator in the first for loop of countDiv() only iterated over prime numbers.
+In order to do this, I would likely have to import a file of prime numbers and read from it.
