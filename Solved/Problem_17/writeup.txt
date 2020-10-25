@@ -1,0 +1,14 @@
+https://projecteuler.net/problem=17
+
+When I first did this problem, I actually did it on paper, but I remember making several small errors, so I will instead code a solution.
+I decided to do this recursively, by digit, and then handle the exception when they arise.
+Since zero is never written, I handled it as not existing.
+The rest is pretty self-explanatory, I kept the spaces in for testing and just used regex to remove them for length.
+
+Runtime: O(Nlog10(N)) N numbers, each digit requires another function call, so log10N
+Answer: 21124
+
+Notes:
+There are a few slight improvements I could make.
+Firstly, I could remove the spaces from the strings, which would save a bit of time.
+Secondly, I could remove some code duplication by creating a toReturn string, and then returning it after the switch statements.
