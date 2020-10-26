@@ -1,0 +1,11 @@
+https://projecteuler.net/problem=18
+
+The problem implied it wanted you to brute force (O(2^N)) this and later do a cleaner solution later, but I figured I'd do the clean solution first.
+If the triangle is only two units high, the path is trivial, just go left if left is higher, otherwise right.
+We can apply this philosophy to the penultimate row of the triangle.
+At each of the 14 numbers, if the path is currently there, we know the next step is whichever is higher.
+Because of this, we can replace these 14 numbers with their value added to the highest value they can reach.
+this process continues to work recursively on the penultimate row until there is only one item in the triangle, which is the answer.
+
+Runtime: O(N^2)
+Answer: 1074
