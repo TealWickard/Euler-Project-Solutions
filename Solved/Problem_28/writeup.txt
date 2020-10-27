@@ -1,0 +1,32 @@
+https://projecteuler.net/problem=28
+
+I found this problem much easier to solve using math.
+Let r be the radius, such that in the given 5x5, the radius is 3.
+Let TR, TL, BR, BL be the bottom/top/right/left corners.
+
+TR = BR + 3(2R - 2) = BR + 6R - 6
+TL = BR + 2(2R - 2) = BR + 4R - 4
+BL = BR + 2R - 2
+BR = BR
+Sum of all corners = TR + TL + BL + BR = 4BR + 12R - 12 
+
+For r = 2, BR = 3.
+To finish the spiral, the number must go left twice, up twice, and right twice.
+Generalized, to finish the spiral, the number must travel 2R - 2 3 times, or 6R - 6.
+This is because it is traveling the side length - 1, which is 2R - 1 - 1.
+To reach the next BR, it must travel (2(R + 1) - 1) - 1 = 2R
+This is because the next radius is R + 1, and the length of each side is 2(R + 1), and it enters the spiral one below the top.
+This means to travel from one BR to the next, it takes 8R - 6.
+So if BR(R + 1) = BR(R) + 8R - 6, with BR(2) = 3.
+This recurrence relationship can be solved to give the closed form:
+BR(R) = 4R^2 - 10R + 7
+
+Plugging this closed form in for the sum of all the corners gives:
+total(R) = 4(4R^2 - 10R + 7) + 12R - 12 = 16R^2 - 28R + 16
+Now, while I could plug this in to java, I will instead take the sum of this sequence from 1 to 501 (and then subtract 3 because total(1) = 4, which it should be 1)
+sum of 16R^2 - 28R + 16 from 1 to 501 =
+(16/6)R(R + 1)(R + 2) - 14R(R + 1) + 16R, where R = 501.
+While I could solve the rest by handle, I will finish the job with java.
+
+Runtime: O(1) Math :)
+Answer: 669171004
