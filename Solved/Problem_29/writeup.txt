@@ -1,0 +1,24 @@
+https://projecteuler.net/problem=29
+
+I first solved this problem with math, and I will show my approach below:
+What causes a^b to equal c^d?
+This only occurs if one is a power of the other.
+WLOG, assume a < c.
+Let a^k = c.
+(a^k)^d = a^kd = a^b, so kd = b.
+For any given a, there are only so many k that make it so c is still under 101.
+Furthermore, both d and b have to be under 101.
+
+Let a = 2.
+k = 2, c = 4.
+For any even b, b/2 = d makes a^b = c^d. 50 total overcounts
+k = 3, c = 8.
+For any b s.t 3|b, b/3 = d makes a^b = c^d. 33 total overcounts - 16 already overcounted (6 | b) = 17 overcounts
+k = 4, c = 16...
+This continues for all a < 11
+
+Now let's try with BigInteger.
+I used collections.sort, and then checked if the next item was the same as the current one, and only increment answer when they differed.
+
+Runtime: O(N^2)
+Answer: 9183
