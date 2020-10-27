@@ -1,0 +1,11 @@
+https://projecteuler.net/problem=31
+
+Content warning: Code is disgusting.
+That being said, I removed the two euro option and added it at the end, so it could be worse.
+
+Runtime: O(too much)
+Answer: 73681
+
+Notes:
+If I wanted to make this code more serious, I would limit the for loops based on the amount of other coins I have.
+For example, change the second for loop to x1 <= (200 - 100*x0)/50
