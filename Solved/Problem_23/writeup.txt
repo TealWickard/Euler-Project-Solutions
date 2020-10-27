@@ -1,0 +1,17 @@
+https://projecteuler.net/problem=23
+
+My first approach was to calculate all the abundant numbers and then check from i = 24 to 28123 if for reach abundant number, i - (that number) was also abundant.
+This works in theory, but there are 6965 abundant numbers, so the runtime is O(28123 * 6965^2), which greatly exceeds runtime limits.
+Instead, I made a hashmap, where every possible sum is set to true.
+I then run through every number under 28123 and sum all the ones who do not have a value set in the hashmap.
+
+Runtime: O(N^2)
+Answer: 4179871
+
+Notes:
+The runtime was not over 30 seconds, but still took about 3-5 seconds, which is higher than I like.
+The bottleneck is finding all the abundant numbers, as it currently is O(N^2/2) = O(N^2), where N = 28123.
+I have a few ideas on how to find abundant numbers faster, but I'm not sure how much they will help.
+For example, 2 * an abundant number will be abundant, so if I began by storing abundant numbers in a hashmap, I could check if i/2 was abundant in O(1).
+Next, if i is not divisible by 2 or 3, it won't be divisible by i/2 or i/3, which are the largest divisors.
+While I cannot prove why this holds, for any number under 28123, if it is divisible by neither 2 nor 3, it cannot be abundant.
