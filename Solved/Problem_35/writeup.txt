@@ -1,0 +1,10 @@
+https://projecteuler.net/problem=35
+
+Any number above 5 that ends in a even number or 5 will be composite.
+This drastically narrows down the quantity of numbers to try, as every digit will have to be 1, 3, 7, or 9.
+This alone should reduce the runtime to an acceptable time.
+To facilitate rotating the number, I stored it as a string, and only turned it back to an int when I need to check if it was prime.
+The second half of the code is ensuring no even or 5 digits.
+
+Runtime: O(N)
+Answer: 55
