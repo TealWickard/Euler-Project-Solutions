@@ -1,0 +1,43 @@
+https://projecteuler.net/problem=32
+
+There's a bit of math I can do to simplify things, starting with analysis of last digit multiplication.
+
+X0 * YZ = Q0, which uses 0 twice.
+0 cannot be the last digit of either the multicand or multiplier.
+X1 * YZ = QZ, which uses Z twice.
+1 cannot be the last digit of either the multicand or multiplier.
+There are other products that don't work, like X6 * Y8 = Z8.
+The valid products are:
+X2 * Y3 = Z6
+X2 * Y4 = Z8
+X2 * Y7 = Z4
+X2 * Y8 = Z6
+X2 * Y9 = Z8
+X3 * Y4 = Z2
+X3 * Y6 = Z8
+X3 * Y7 = Z1
+X3 * Y8 = Z4
+X3 * Y9 = Z7
+X4 * Y7 = Z8
+X4 * Y8 = Z2
+X4 * Y9 = Z6
+X6 * Y7 = Z2
+X6 * Y9 = Z4
+X7 * Y8 = Z6
+X7 * Y9 = Z3
+X8 * Y9 = Z2
+
+While this may look like a lot, it is only 18 out of a possible 100.
+
+Next, let's look at digit analysis.
+The valid number of digits are:
+1 * 4 = 4
+4 * 1 = 4
+2 * 3 = 4
+3 * 2 = 4
+
+With all this analysis, I think the number of cases I need check are low enough to brute force.
+I added the hits to an arraylist to prevent duplication.
+
+Runtime: O(N^2) where N is something? It's hard to give an exact number
+Answer: 45228
