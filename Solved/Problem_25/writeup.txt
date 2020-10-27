@@ -1,0 +1,11 @@
+https://projecteuler.net/problem=25
+
+This is another problem that just relies on knowing how to use BigIntegers.
+
+Runtime: O(N)
+Answer: 4782
+
+Notes:
+I believe there is a way to do this mathematically, as fibonacci numbers have a closed form.
+They also can be approximated with a exponential series, multiplying by phi.
+Perhaps I will have to do this in a future problem where the number is too high to compute.
