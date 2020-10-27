@@ -1,0 +1,7 @@
+https://projecteuler.net/problem=36
+
+This problem would be a lot more difficult if toBinaryString didn't exist.
+But it does, so all I needed to do was build a palindrome checker.
+
+Runtime: O(Nlog10N) Nlog10N from checking the base 10 palindromes, Nlog2N from checking the binary palindromes
+Answer: 872187
