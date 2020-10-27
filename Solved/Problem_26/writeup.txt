@@ -1,0 +1,16 @@
+https://projecteuler.net/problem=26
+
+If a decimal is 0.XYZXYZXYZXYZ, this means that it can be represented as a geometric series:
+0.XYZXYZ... = XYZ/10^3 + XYZ/10^6 + XYZ/10^9 + ...
+The sum of this series is I/(1 - r), where r is 10^3 in this case and I = XYZ, so the sum is XYZ/999.
+We do not lose any generality by assuming 3 repeated digits, so if the decimal has X repeating digits, it can be represented as:
+<Repeated Digits> / (10^X - 1)
+This fact is incredibly useful, as it means a number such as 1/7 can be expressed as 142857/9999999.
+We can find how many digits quickly because 7 does not divide 9, 99, 999, 9999, 99999, or 999999, but does divide 9999999.
+Any number that divides 10^N has finite digits, because it can be represented as X/10^N, where X, N are integers.
+It follows that multiplying an number by 2 or 5 will not change the amount of digits it repeats.
+Because of this property, I will be skipping any numbers that have a factor of 2 or 5.
+Due to how many 9s must be added to numbers, I must once again use BigIntegers.
+
+Runtime: O(NlogN) Just an estimation, it's hard to say for sure how many decimals a number has on average
+Answer: 983
