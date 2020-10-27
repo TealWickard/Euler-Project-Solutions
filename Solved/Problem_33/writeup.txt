@@ -1,0 +1,9 @@
+https://projecteuler.net/problem=33
+
+For this problem, I knew the numerator would always be smaller than the denominator.
+I then also removed all the cases where either was a multiple of ten, because they either didn't work or were trivial.
+After that, I checked if the two numbers had any matching characters, and if they did, cross multiplied the two fractions to check for equivalence.
+Finally, to simplify the fraction, I went through the possible divisors of both and divided the ones that they shared.
+
+Runtime: O(N^2)
+Answer: 100
