@@ -1,0 +1,10 @@
+https://projecteuler.net/problem=20
+
+This problem was just a matter of storing a large number and iterating through its digits, so I used BigInteger.
+
+Runtime: O(N)
+Answer: 648
+
+Notes:
+I need to work on optimizing data types.
+I'm curious if I can be more efficient and avoid the big chains of data type conversion on lines 10 and 12.
