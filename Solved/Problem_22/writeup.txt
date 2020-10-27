@@ -1,0 +1,8 @@
+https://projecteuler.net/problem=22
+
+For this problem, I need two pieces of information about each name: the sum of its characters and its position alphabetically.
+To the get the sum of the characters, I removed the quotes and summed (char - 64).
+To get the index alphabetically I put all the items in a list and used collections.sort, and then indexOf.
+
+Runtime: O(N*logN) I do not know the runtime of Collections.Sort, but I assume it has to be NlogN
+Answer: 871198282

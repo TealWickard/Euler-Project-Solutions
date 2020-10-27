@@ -1,0 +1,12 @@
+https://projecteuler.net/problem=21
+
+For this problem, I started by calculating the divisors of each number from 2 to 10000.
+I then iterated through each number and checked if it was amicable.
+
+Runtime: O(N*sqrt(N))
+Answer: 31626
+
+Notes:
+I'm curious if there's a more efficient solution.
+In hindsight, a HashMap is probably the best data type to use here.
+An array would likely work just as well while using much less memory.
