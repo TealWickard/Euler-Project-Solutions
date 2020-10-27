@@ -1,0 +1,13 @@
+https://projecteuler.net/problem=34
+
+There are only 10 different factorials that need taking in this question, so to save time, I made a function that runs in O(1) to speed up the calculations.
+The first half of this problem is calculating the sum of factorials, which wasn't too complicated.
+The second half is establishing an upperbound. 9! = 362880, so if a 7 digit number was all 9s, it would be 3265920, which is less than 9999999.
+After using that as my upper bound, I got the solution.
+
+Runtime: O(N)
+Answer: 40730
+
+Notes:
+The program is a bit slow, taking about a second to get an answer.
+My upper bound is about 100x the answer, so I could reduce the amount of times the loop runs.
