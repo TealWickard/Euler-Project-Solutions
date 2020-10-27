@@ -1,0 +1,12 @@
+https://projecteuler.net/problem=19
+
+I'm not sure if Java's built-in Date class works consistently a century ago, so I decided to implement the rules given.
+I stored each piece of data seperately, and then incremented the day and checked to see if the next week/month/year would roll over.
+I then checked every date until 2001 to see if it was a Sunday on the first day.
+
+Runtime: O(N)
+Answer: 171
+
+Notes:
+I can probably save some runtime by skipping months.
+I only care about checking the first of each month, so when I enter January for example, I could increment day by 31 and dayOfWeek by 31 % 7.
