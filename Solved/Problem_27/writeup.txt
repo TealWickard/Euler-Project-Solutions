@@ -1,0 +1,12 @@
+https://projecteuler.net/problem=27
+
+This appears to be the first problem that will not allow brute-forcing, as it would be O(N^(5/2)) to check all values a,b.
+This would take about a billion instructions, which is probably too high.
+The first thing I notice is that n starts as 0, meaning that the first prime has to be b.
+Secondly, n = 1 is 1 + a + b, so a has to be odd.
+This already narrows down the options significantly, so I will now see if I can brute force it.
+Sure enough, it takes very little time to find the answer.
+
+Runtime: O(N^(3/2)) Possibly more. O(N^(3/2)) is what it takes to find the primes b.
+It then takes O(P*N*D) where P is the number of primes, N is the range of A, and D is the amount of primes in the sequence of increment ns.
+Answer: -59231
