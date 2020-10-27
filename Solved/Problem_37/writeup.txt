@@ -1,0 +1,8 @@
+https://projecteuler.net/problem=37
+
+Similar to cyclical primes, the digits are quite restrained.
+2 and 5 can only exist if it is the first number, and the rest must be 1, 3, 7, or 9, but 1 and 9 cannot be the first or last.
+After narrowing it down, I just checked every prime that fit the digit criteria.
+
+Runtime: O(NlogN) Probably, not entirely sure
+Answer: 748317
