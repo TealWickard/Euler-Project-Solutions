@@ -1,0 +1,10 @@
+https://projecteuler.net/problem=30
+
+Figuring out if any number's sum of digits to the 5th power is equal to itself is a simple calculation.
+The other half of this question is knowing when to stop.
+If the number was 6 9s, 999999, the sum of the digits to the fifth power is 354294, which is under 999999.
+Therefore, 354294 is an upper limit.
+This upper limit can be reduced further, but since the algorithm's runtime is quick, I found this sufficient.
+
+Runtime: O(Nlog10(N))
+Answer: 443839
