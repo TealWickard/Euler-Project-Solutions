@@ -1,0 +1,15 @@
+https://projecteuler.net/problem=39
+
+WLOG, let A <= B.
+The maximum A can be is 293, because if A = B = 294, A + B + C > 1000
+I then created an array of size 1001 that way I could use the index for the perimeter (I could have saved 1 spot of memory by zero indexing, but this made the code prettier).
+Next, I iterated through every A <= 293 and B <= 1000 such that A <= B, and checked if C is whole, and incremented the respective perimeter's index if it was.
+I then iterated through the array and found the index with the highest int.
+
+Runtime: O(N^2)
+Answer: 840
+
+Notes:
+I believe there's a faster way to do this.
+If I can find all the triangles such that a and b are relatively prime, I know the rest of the triangles are their multiples.
+I could not find a way to quickly find those triangles, so I brute forced it instead.
