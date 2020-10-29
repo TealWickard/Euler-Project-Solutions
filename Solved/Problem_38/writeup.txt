@@ -1,0 +1,57 @@
+https://projecteuler.net/problem=38
+
+The problem description gives a very helpful lower bound of 918273645.
+Because of this, I do not have to test anything that will be lower, as I know the answer is equal to or higher than 918273645.
+Since the first X digits are 1 * N, N has to be larger than the first X digits of 918273645.
+So if N is 2 digits, N > 91.
+If N is 3 digits, N > 918.
+etc.
+
+If N is 2 digits, 1 * N is 2 digits, 2 * N is 3 digits, 3 * N is 3 digits, and 4 * N is 4 diigts.
+There is no way to get 9 digits, so N cannot be 2 digits.
+
+If N is 3 digits, 1 * N is 3 digits, 2 * N is 4 digits, and 3 * N is 4 digits.
+There is no way to get 9 digits, so N cannot be 3 digits.
+
+If N is 4 digits, 1 * N is 4 digits, 2 * N is 5 digits.
+
+If N > 4 digits, 1 * N > 4 digits, 2 * N > 5 digits.
+
+Therefore, 9182 < N < 10000
+
+If N >= 9500, 2 * N = 19XYZ, which reuses 9.
+
+Therefore, 9182 < N < 9500
+
+At this point, it would be sensible to brute force all 400 or so combinations, but I am determined to solve this with analysis instead.
+N cannot contain 0, 1, or 8 because 2 * N contains 1 and 8, and 0 is not pandigital.
+
+9221 < N < 9477
+
+Let's now analyze the three cases of the second digit of N:
+N = 92AB, 2N = 18CDE, where C = 4, 5
+If A = 5, C = 5. If B = 5, E = 0. If E = 5, B is not an integer. If D = 5, A = 2.
+Therefore, C = 5. N = 92AB, 2N = 185DE.
+A > 4, so A = 6, 7.
+If A = 6, D = 2 unless B > 4, so B = 7. This leaves N = 9267, 2N = 18534, which is a solution, but might not be the highest.
+If A = 7, D = 4, so B < 5. N = 927B, 2N = 1854E. B = 3, E = 6.
+927318546 is the highest if N = 92AB
+
+N = 93AB, 2N = 18CDE, where C = 6, 7
+Let C = 6. N = 93AB, 2N = 186DE, where A < 5.
+A != 1 or 3, and 4 because 2 * 4 = 8, so if C = 6, A = 2.
+N = 932B, 2N = 186DE, where D = 4, 5.
+D is the only number that can 5, as if B = 5, E = 0, and if E = 5, B is not an integer.
+N = 9327, 2N = 18654.
+Let C = 7. N = 93AB, 2N = 187DE, where A >= 5, so A = 5, 6.
+If A = 5, D = 0, 1, neither of which work, so if C = 7, A = 6.
+N = 936B, 2N = 187DE, D = 2, 3 = 2.
+N = 936B, 2N = 1872E. Neither digit can be 5, so C != 7.
+932718654 is the highest if N = 93AB
+
+N = 94AB, 2N = 18CDE, where C = 8, 9, and therefore doesn't exist.
+
+Highest must be 932718654
+
+Runtime: O(Math)
+Answer: 932718654
