@@ -1,0 +1,10 @@
+https://projecteuler.net/problem=43
+
+There are 10! = 3.5m different 10 digit pandigital numbers.
+While I may have been able to get this to run in under than 30 seconds by testing each one, it would have been close, and I dislike anything over a second.
+To significantly reduce the runtime, I started the linkedlist of possible answers with exclusively numbers divisible by 17 at the last three digits.
+I then populated the rest of the pandigital numbers given those conditions and checked each substring to see which satisfied the given conditions.
+Finally, I stored the answer in a biginteger, because it was too large for a long or an int.
+
+Runtime: O(D!) where D is digits
+Answer: 16695334890
