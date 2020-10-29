@@ -1,0 +1,8 @@
+https://projecteuler.net/problem=42
+
+While likely overkill, instead of calculating if each individual number was a triangle number, I put the first 100 triangle numbers in a hashmap.
+This way I could know in O(1) if any number was a triangle number, since no word would exceed the 100th number.
+I then iterated through every word, summing (c - 64) because each char was uppercase.
+
+Runtime: O(N*length(N)) N = word number, length(N) = word length
+Answer: 162
