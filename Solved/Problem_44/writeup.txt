@@ -1,0 +1,10 @@
+https://projecteuler.net/problem=44
+
+I cannot think of a way to rigorously prove this.
+Instead, I guessed that the answer would be the difference between two of the first 10000 pentagonal numbers.
+To save runtime, I stored the first 10000 pentagonal numbers in a hashmap so I could access them in O(1).
+I then iterated through all i, j < 10000 such that i <= j, and printed the smallest difference.
+This turned out to give the correct solution, but I do not know how to prove that the answer must exist in the first 10000 pentagonal numbers.
+
+Runtime: O(N^2?) where N is the number of pentagonal numbers I checked.
+Answer: 5482660
