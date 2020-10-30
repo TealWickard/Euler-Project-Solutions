@@ -1,0 +1,7 @@
+https://projecteuler.net/problem=45
+
+Since all three series were always increasing, I could keep incrementing the lowest one of the three.
+I decided to approach this by finding the points where there are numbers that are both hexagnal and pentagonal, and only then checking if they are triangular.
+
+Runtime: O()
+Answer: 
