@@ -1,0 +1,8 @@
+https://projecteuler.net/problem=46
+
+I decided to implement a more efficient prime testing method, as I would need to check every odd number regardless.
+For every composite odd number C, I then checked if for every i such that 2 * i * i < C, if C - 2 * i * i is prime.
+The first C for which no such i exists such that C - 2 * i * i is prime is the answer.
+
+Runtime: O(N^(3/2)) I think...
+Answer: 5777
