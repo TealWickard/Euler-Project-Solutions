@@ -1,0 +1,14 @@
+https://projecteuler.net/problem=47
+
+First, I wrote a function to calculate the total distinct prime factors.
+This function will double as a prime checker, as if there are 0 distinct prime factors less than N, N is prime.
+I then checked every number to see how many distinct prime factors it had, adding it to the arraylist of primes if it was prime.
+When 4 primes in a row have exactly 4 distinct prime factors, I broke out of the loop, and returned the first one.
+
+Runtime: O(N^2) I think? It's getting really hard to calculate accurate runtimes.
+Answer: 134043
+
+Notes:
+The runtime was quite slow, taking about 5 seconds to produce an answer.
+I suspect my inefficiency comes from my distinctPrimes function.
+I was able to speed up my code to about 1 second by identifying primes faster, breaking if there are more than 4 distinct primes, and looking through fewer numbers.
