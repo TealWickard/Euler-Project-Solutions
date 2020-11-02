@@ -1,0 +1,14 @@
+https://projecteuler.net/problem=50
+
+This problem was greatly simplified by establishing lower and upper bounds for the sequence of consecutive primes.
+The smallest "highest" number of consecutive primes is p0 + p1 + ... + pn = P, such that P is prime and less than a million.
+The upper bound is the smallest value of k such that p0 + p1 + ... + pk > 1000000.
+This ended up give a sequence length in a range of 10 values.
+I then iterated through every index of primes such that the sum of the first n primes starting at the index was not above 1 million.
+
+Runtime: O(N^2)
+Answer: 997651
+
+Notes:
+The runtime can be dramatically improved by doing a "walking sum" of sorts, where instead of resumming the entire sequence each time, the first index's prime is removed and the last index + 1's prime is added.
+I tried to implement this, but ran into countless issues and couldn't get it to work, so I did the "brute-force" method, which still ran very quickly.
