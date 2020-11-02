@@ -1,0 +1,11 @@
+https://projecteuler.net/problem=49
+
+This problem is divided into 3 sections: finding 4 digit primes, finding 3 that are consecutive, and finding if they share the same digits.
+For finding 4 digit primes, I reused the isPrime function I wrote in a previous problem and iterated through all odd 4 digit numbers.
+To find if they are consecutive, I iterated through every 4 digit prime i, and then checked for all larger 4 digit primes j, if j + (j - i) was a 4 digit prime.
+If it is, I then ran compDigits, to compare digits.
+I decided to do a bucket sort of sorts to count digits, as it would run in O(1).
+Finally, I checked to make sure the first number wasn't 1487, because that was the example given in the problem.
+
+Runtime: O(N ^ (3/2))
+Answer: 296962999629
