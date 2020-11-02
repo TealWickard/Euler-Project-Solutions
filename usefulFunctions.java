@@ -18,4 +18,18 @@ public class usefulFunctions {
         }
         return true;
     }
+    public static boolean compDigits(int num1, int num2){
+        int[] digits1 = new int[10];
+        int[] digits2 = new int[10];
+        for(char c : Integer.toString(num1).toCharArray()){
+            digits1[c - 48]++;
+        }
+        for(char c : Integer.toString(num2).toCharArray()){
+            digits2[c - 48]++;
+        }
+        for(int i = 0; i < 10; i++){
+            if(digits1[i] != digits2[i]) return false;
+        }
+        return true;
+    }
 }

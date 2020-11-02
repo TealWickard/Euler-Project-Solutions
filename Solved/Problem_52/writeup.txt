@@ -1,0 +1,9 @@
+https://projecteuler.net/problem=52
+
+I will be using the same compDigits function that I made for problem 49, but adjusting it so it checks everything.
+I'm not sure how high the answer will be / how much analysis needs to be done, so I will begin by brute forcing and seeing if that yields an answer.
+I will note, however, that 6x must have the same number of digits as x, so x can be a maximum of 1.66666 * 10^N for some integer N.
+Fortunately, the answer was 6 digits, so the program found it almost instantly.
+
+Runtime: O(Nlog10(N)) I think? I run through N / 6 numbers, and compDigits runs in log10(N)
+Answer: 142857
