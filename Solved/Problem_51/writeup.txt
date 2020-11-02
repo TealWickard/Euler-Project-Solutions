@@ -1,0 +1,26 @@
+https://projecteuler.net/problem=51
+
+This problem very generously gives us a lower bound to work with: 56XX3.
+To think about this problem, I will imagine the unknown digits as 0, and then a multiple of the number that is a 1 in every unknown position.
+For example, 56XX3 = 56003 + 110X, for 7 values of X from 0 to 9.
+If the second term has a number of 1s not divisible by 3, there will be at least 3 numbers divisible by 3 in the set of numbers when X = [0, 9].
+For example, with 56003 + 110X, 3 | 56003 + 110X when X = 2, 5, 8. These notably were the numbers missing, as well.
+This means that there will be 3 | N 1s, which hopefully is either 3 or 6.
+It is clear that the last digit cannot be unknown, and must be 1, 3, 7, or 9.
+I will proceed by examing all N digit numbers, check every permutation of unknowns, and then iterate through the remaining N - 3 - 1 digits.
+I will assume there are only 3 digits, and this is an assumption I will be able to hold until 7 digits (and even then, there's only a few cases that need checking).
+Hopefully, the answer is not 8 digits. 
+
+I realize I can start at 6 digits, becaues if the answer was 5 digits, one of the first two digits would be one of the unknowns, making 56XX3 no longer the smallest number.
+There were a few matches for 6 digits, but many of them started with X and required X to be 0, which is not permitted.
+I then added a check to see if the first digit was X and the index was 0, and to failed that case immediately.
+This left me with one 6 digit combination: 020303 + 101010X.
+While this has a leading 0, 20303 is composite, and only one other X makes it composite, so there are still 8 primes.
+
+Runtime: I give up on runtimes at this point. I'll just explain what it ran through.
+There are 100 two digit combinations that weren't unknown.
+For each of these, there are (3 * 4 * 5) / (3 * 2 * 1) = 10 to arrange the unknown digits.
+Then there were 4 endings of either 1, 3, 7, 9.
+In total, I checked 10 * 4 * 100 = 4000 6-digit cases for primality.
+
+Answer: 121313
