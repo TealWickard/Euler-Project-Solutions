@@ -1,0 +1,11 @@
+https://projecteuler.net/problem=53
+
+I can simplify things by using some things I know about combinatorics.
+First, C(X, Y) = C(X, X - Y).
+Next, C(X, Y + 1) > C(X, Y) if Y < X / 2.
+What this tells us, is that for the smallest value r such that C(n, r) > 1000000, all values between r and n - r (inclusive) will be greater than 1000000.
+So when I find the smallest value r, I can add n - 2r + 1 values and increment n.
+Additionally, the problem says I can start at n = 23, so I will!
+
+Runtime: O()
+Answer: 
