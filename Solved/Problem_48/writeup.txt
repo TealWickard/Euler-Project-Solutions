@@ -1,0 +1,8 @@
+https://projecteuler.net/problem=48
+
+(A * B) mod C = (A mod C) * (B mod C)
+Because of this, I only need to store the last 10 digits of any number, as the answer asks for the last 10 digits.
+This allows me to store the data in a long, and iterate through every n from 1 to 1000 quickly.
+
+Runtime: O(N ^ 2)
+Answer: 9110846700
