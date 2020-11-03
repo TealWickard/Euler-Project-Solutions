@@ -1,0 +1,8 @@
+https://projecteuler.net/problem=55
+
+Working with large large numbers, gotta use BigInteger.
+There are two main functions at play here: reversing a BigInteger and checking if it is a palindrome.
+For reversing it, I opted to use StringBuilder, as I believe it should run quicker than making the string normally.
+To check if it's a palindrome, I iterated over the first half of its digits and checked if the mirror digit is the same.
+
+Answer: 249
