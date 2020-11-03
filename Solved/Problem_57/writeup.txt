@@ -1,0 +1,10 @@
+https://projecteuler.net/problem=57
+
+This problem becomes a lot simpler when you realize the basic recursive formula the numerator and denominator are using.
+let num(n) and den(n) represent the numerator and denominator of the fraction at the nth iteration.
+num(n + 1) = num(n) + 2 * den(n)
+den(n + 1) = num(n) + den(n)
+From this, I can easily calculate the numerators and denominators.
+Since the recursive formula is multiplicative, there will be hundreds of digits, so I am using BigInteger and toString.length() to compare.
+
+Answer: 153
