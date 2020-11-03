@@ -1,0 +1,6 @@
+https://projecteuler.net/problem=56
+
+The code for this problem is actually quite simple.
+I iterated through every a and b, stored a^b in a BigInteger, then summed all the digits, and stored it if it was larger than the current answer.
+
+Answer: 972
