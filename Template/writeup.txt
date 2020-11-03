@@ -2,5 +2,4 @@ https://projecteuler.net/problem=
 
 
 
-Runtime: O()
 Answer: 
