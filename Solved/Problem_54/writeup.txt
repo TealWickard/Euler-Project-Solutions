@@ -1,0 +1,10 @@
+https://projecteuler.net/problem=54
+
+My code is anything but elegant for this.
+My general approach was to store the value of the hand in an array.
+The first element would contain the rank of the hand, ie 0 = high card, 1 = pair, 2 = two pair, ... , 8 = royal flush.
+Then, the rest of the numbers would be the numbers that broke ties.
+For example, in two full houses, whoever had the higher triplet would win, so I stored the array as [6, (number of triplet), (number of pair)]
+Then, I checked every index of the arrays until one had a higher number, which would be the better hand.
+
+Answer: 376
