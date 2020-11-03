@@ -1,0 +1,19 @@
+https://projecteuler.net/problem=58
+
+From my writeup for problem 28:
+TR = BR + 3(2R - 2) = BR + 6R - 6
+TL = BR + 2(2R - 2) = BR + 4R - 4
+BL = BR + 2R - 2
+BR = BR
+
+Solving recurrence relations gives:
+
+BR(R) = 4R^2 - 4R + 1  = (2R - 1) ^ 2
+BL(R) = 4R^2 - 6R + 3
+TL(R) = 4R^2 - 8R + 5
+TR(R) = 4R^2 - 10R + 7
+
+The bottom right corner is always divisible by 2R - 1, which is an integer, so it cannot be prime.
+This just leaves checking the others, and finding when there is less than 10% prime density.
+
+Answer: 26241
