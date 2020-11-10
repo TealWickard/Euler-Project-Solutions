@@ -1,0 +1,11 @@
+https://projecteuler.net/problem=59
+
+Likely the "best" way of doing this problem is to match decrypted text using various keys to a dictionary, and see which key has the most words.
+Instead, given that the key was 3 lowercase letters, I instead found each letter that produced the most decrypted letters.
+With this key, I then summed up the original message using bitwise XOR.
+
+Answer: 129448
+
+Notes:
+My method does not guarantee a solution, as if every third character happened to be a number or symbol, the code might return a wrong character.
+Hence why an exhaustion approach against a dictionary would be more effective.
