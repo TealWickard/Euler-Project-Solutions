@@ -1,0 +1,31 @@
+https://projecteuler.net/problem=60
+
+There is a decent amount of analysis that can be done to reduce the number of primes that need to be checked.
+For instance, let a, b, c, d, e represent the 5 primes mod 3.
+WLOG, let a = 0.
+This means a is a multiple of 3, and therefore must be 3.
+WLOG, let a = 1.
+WLOG, if b = 2, then the concatination of a and b's numbers will be 0 mod 3, or divisible by 3.
+The same follows for a = 2, b = 1.
+
+This means that WLOG, b = c = d = e != 0, and a = 0 or a = b.
+
+Additionally, all the primes mod 10 but be 1, 3, 7, or 9.
+
+I started by assuming one of the primes was 3, and that the rest were 1 mod 3.
+This found [3, 5323, 10357, 29587, 31231], which sums to 76501, which is incorrect.
+However, this provides a very useful upper bound, as I know the answer must be below this number.
+Using this upper bound, I assumed one of the primes was 7, and got [7, 1237, 2341, 12409, 18433], which sums to 34427.
+This is also incorrect, but a much narrower upper bound.
+Using this upper bound, I was able to prove that neither 3 nor 7 are the lowest prime.
+
+While the next step wasn't the most elegant, I started to step through which number I was starting with manually.
+11 had no hits, but 13 set the new upper bound at 26033 with [13, 5197, 5701, 6733, 8389], which happened to be the answer.
+
+Answer: 26033
+
+Notes:
+TODO: Prove that this is the lower bound
+Currently, I stopped because the answer said so.
+However, outside of that, I have no conclusive reason to believe this is the lowest sum.
+While I could put all the starting primes between 13 and 26033/5 in a loop, this would greatly exceed the 30 second runtime requirement.
